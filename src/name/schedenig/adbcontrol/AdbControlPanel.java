@@ -245,7 +245,9 @@ public class AdbControlPanel extends JPanel implements MouseListener, KeyListene
 	private void makeScreenshot()
 	{
 		adbHelper.screenshot(imageFile);
-		loadImage(imageFile);
+		if(imageFile.exists()) {
+			loadImage(imageFile);
+		}
 	}
 
 	private void loadImage(File file)

@@ -39,6 +39,7 @@ public class AdbHelper
 	private void executeCommand(String cmd, OutputStream out)
 	{
 		String cmdLine = config.getAdbCommand() + " " + cmd;
+		System.out.println("adb "+cmd);
 		
 		Process p;
 		
